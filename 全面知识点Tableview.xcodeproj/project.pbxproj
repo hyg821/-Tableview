@@ -15,6 +15,8 @@
 		B5671A1E1CE96DF8004EB728 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5671A1C1CE96DF8004EB728 /* LaunchScreen.storyboard */; };
 		B5671A291CE96DF8004EB728 /* _____TableviewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5671A281CE96DF8004EB728 /* _____TableviewTests.m */; };
 		B5671A341CE96DF8004EB728 /* _____TableviewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5671A331CE96DF8004EB728 /* _____TableviewUITests.m */; };
+		B5671A431CE96E9C004EB728 /* MyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5671A421CE96E9C004EB728 /* MyCell.m */; };
+		B5671A461CE96EB5004EB728 /* MyCellInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = B5671A451CE96EB5004EB728 /* MyCellInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		B5671A2F1CE96DF8004EB728 /* 全面知识点TableviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "全面知识点TableviewUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5671A331CE96DF8004EB728 /* _____TableviewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "_____TableviewUITests.m"; sourceTree = "<group>"; };
 		B5671A351CE96DF8004EB728 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5671A411CE96E9C004EB728 /* MyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCell.h; sourceTree = "<group>"; };
+		B5671A421CE96E9C004EB728 /* MyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCell.m; sourceTree = "<group>"; };
+		B5671A441CE96EB5004EB728 /* MyCellInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCellInfo.h; sourceTree = "<group>"; };
+		B5671A451CE96EB5004EB728 /* MyCellInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCellInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,10 @@
 				B5671A121CE96DF8004EB728 /* AppDelegate.m */,
 				B5671A141CE96DF8004EB728 /* ViewController.h */,
 				B5671A151CE96DF8004EB728 /* ViewController.m */,
+				B5671A411CE96E9C004EB728 /* MyCell.h */,
+				B5671A421CE96E9C004EB728 /* MyCell.m */,
+				B5671A441CE96EB5004EB728 /* MyCellInfo.h */,
+				B5671A451CE96EB5004EB728 /* MyCellInfo.m */,
 				B5671A171CE96DF8004EB728 /* Main.storyboard */,
 				B5671A1A1CE96DF8004EB728 /* Assets.xcassets */,
 				B5671A1C1CE96DF8004EB728 /* LaunchScreen.storyboard */,
@@ -271,8 +281,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5671A161CE96DF8004EB728 /* ViewController.m in Sources */,
+				B5671A431CE96E9C004EB728 /* MyCell.m in Sources */,
 				B5671A131CE96DF8004EB728 /* AppDelegate.m in Sources */,
 				B5671A101CE96DF8004EB728 /* main.m in Sources */,
+				B5671A461CE96EB5004EB728 /* MyCellInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

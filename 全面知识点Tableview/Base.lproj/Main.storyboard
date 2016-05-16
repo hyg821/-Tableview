@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F28b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eZZ-bo-AIM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,99 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="OKl-wB-bWV">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mycell" id="3Ub-ht-93w" customClass="MyCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Ub-ht-93w" id="lxd-oA-N4l">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="LSA-AR-i5v"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="kmI-53-KWs"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="OKl-wB-bWV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Abn-YB-Gpo"/>
+                            <constraint firstItem="OKl-wB-bWV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="QAV-Dg-rPs"/>
+                            <constraint firstAttribute="trailing" secondItem="OKl-wB-bWV" secondAttribute="trailing" id="WAn-Wl-0j6"/>
+                            <constraint firstAttribute="bottom" secondItem="OKl-wB-bWV" secondAttribute="bottom" id="lwP-S6-q5j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="OKl-wB-bWV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Abn-YB-Gpo"/>
+                                <exclude reference="QAV-Dg-rPs"/>
+                                <exclude reference="WAn-Wl-0j6"/>
+                                <exclude reference="lwP-S6-q5j"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="OKl-wB-bWV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Abn-YB-Gpo"/>
+                                <include reference="QAV-Dg-rPs"/>
+                                <include reference="WAn-Wl-0j6"/>
+                                <include reference="lwP-S6-q5j"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="cell增删" id="MGl-yM-Op3">
+                            <connections>
+                                <action selector="cellAddAndDelete:" destination="BYZ-38-t0r" id="7UK-zA-euF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="1ZV-gF-wvb"/>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="kzb-qZ-rsC">
+                        <barButtonItem key="leftBarButtonItem" title="显示一些方法" id="OoP-hn-fmw">
+                            <connections>
+                                <action selector="showSomeWay:" destination="BYZ-38-t0r" id="MD9-AH-Dxx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="OKl-wB-bWV" id="ucy-FU-wYB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="931.5" y="403"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EkP-36-eMG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="eZZ-bo-AIM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nQj-dD-vkS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ElP-el-REi">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q92-3u-Vz5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Td-Ek-hUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.5" y="408"/>
         </scene>
     </scenes>
 </document>
